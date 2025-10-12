@@ -157,7 +157,7 @@ export class BsModsManagerService {
         }
 
         const env: Record<string, string> = {};
-        const cmd = `"${ipaPath}" "${bsExePath}" ${args.join(" ")}`;
+        const cmd = `"${ipaPath}" "${BS_EXECUTABLE}" ${args.join(" ")}`;
         let winePath: string = "";
         if (process.platform === "linux") {
             const { error: winePathError, result: winePathResult } =
